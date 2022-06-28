@@ -1,0 +1,48 @@
+
+int x;
+int y;
+int z[100];
+
+int a, b, c;
+
+void countDown(n of int)
+begin 
+   if (n == 0) then
+    return;
+
+    else
+    begin
+        write n;
+        write "\n";
+    end
+    countDown(n - 1);
+end
+
+
+int square(x of int)
+begin
+    return x * x;
+end
+
+
+void main(void)
+begin
+    write "Enter a number for x: \n";
+    read x;
+    write "Countdown from x:\n";
+    countDown(x);
+    
+    write "The square is: ";
+    write square(x);
+    z[x] = square(x);
+    write "\nShoving that into the array at z[x]\nz[x] is now: \n";
+    write z[x];
+    write "\n\ntesting expression inside arrays:\n";
+    z[x + 4 + z[x]] = x  + 4 + square(3);
+
+    write "z[ ";
+    write "x + 4 + z[x]] is now:\n";
+    write z[x + 4 + z[x]];
+    write "\n\nthe index was: ";
+    write x + 4 + z[x];
+end
