@@ -1,4 +1,4 @@
-
+// header file for emit.c
 
 #ifndef EMIT_H
 #define EMIT_H

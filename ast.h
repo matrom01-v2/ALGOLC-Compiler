@@ -10,7 +10,6 @@
 
 #ifndef AST_H
 #define AST_H
-//#include "symtab.h"
 
 // enmu whihc alows us to distinguish node type
 enum AST_Node_Type {

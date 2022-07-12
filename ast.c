@@ -1,11 +1,12 @@
 /**
  * ast.c
  * Implementation of ast functions
- * Mateo Romero    NEED PRE AND POST!!!!!!!!!!!!!!!!!!!!
+ * Mateo Romero 
  * February 2022
  * 
  * 
- * LAST UPDATE: 4/27/2022
+ * LAST UPDATE: 7/12/2022
+ * Update details: Minor syntax and style fixes
  */
 
 
@@ -47,7 +48,7 @@ int CompareFormals(struct ASTNode *p, struct ASTNode *q) {
 
 
 // PRE: enumerated type A_OPERATORS
-// POST: print out needed operator for expressions / types
+// POST: print out needed operator for expressions and or operator types
 void Print_OP(enum A_OPERATORS op) {
 
     switch (op) {
@@ -55,18 +56,23 @@ void Print_OP(enum A_OPERATORS op) {
         case A_PLUS : 
             printf(" + ");
             break;
+
         case A_MINUS :
             printf(" - ");
             break;
+
         case A_TIMES :
             printf(" * ");
             break;
+
         case A_DIVIDE :
             printf(" / ");
             break;
+
         case A_BOOLTYPE :
             printf("BOOL ");
             break;
+
         case A_VOIDTYPE :
             printf("VOID ");
             break;
@@ -180,7 +186,7 @@ void AST_Print(struct ASTNode *p, int tab) {
             indent(tab);
             printf("READ STATEMENT\n");
             AST_Print(p->s1, tab+1);
-            AST_Print(p->next, tab+1); // statements are next connected
+            AST_Print(p->next, tab+1); // ALL statements are next connected
             break;
 
         case A_IDENT:
